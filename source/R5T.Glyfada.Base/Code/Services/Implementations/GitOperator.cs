@@ -12,5 +12,10 @@ namespace R5T.Glyfada
         {
             this.Core = core;
         }
+
+        public void Init(string directoryPath, bool quiet = false)
+        {
+            this.Core.Init(directoryPath, quiet);
+        }
     }
 }
