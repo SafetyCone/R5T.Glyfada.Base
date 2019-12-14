@@ -17,5 +17,10 @@ namespace R5T.Glyfada
         {
             this.Core.Init(directoryPath, quiet);
         }
+
+        public void Clone(string repositoryURL, string localDiretoryPath)
+        {
+            this.Core.Clone(repositoryURL, localDiretoryPath);
+        }
     }
 }
