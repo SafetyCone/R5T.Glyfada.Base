@@ -5,10 +5,12 @@ namespace R5T.Glyfada
 {
     public interface IGitOperatorCore
     {
-        void Add(string localPath);
-        void Clone(string repositoryURL, string localDiretoryPath);
-        void Commit(string localPath, string message);
+        void Add(string path);
+        void Clone(string repositoryURL, string localDirectoryPath);
+        void Commit(string path, string message);
         void Init(string directoryPath, bool quiet = false);
-        void Push(string directoryPath);
+        bool IsUnderSourceControl(string path);
+        void Pull(string path);
+        void Push(string path);
     }
 }

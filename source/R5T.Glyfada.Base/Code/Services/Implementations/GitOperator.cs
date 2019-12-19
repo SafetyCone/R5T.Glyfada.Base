@@ -13,19 +13,19 @@ namespace R5T.Glyfada
             this.Core = core;
         }
 
-        public void Add(string localPath)
+        public void Add(string path)
         {
-            this.Core.Add(localPath);
+            this.Core.Add(path);
         }
 
-        public void Clone(string repositoryURL, string localDiretoryPath)
+        public void Clone(string repositoryURL, string localDirectoryPath)
         {
-            this.Core.Clone(repositoryURL, localDiretoryPath);
+            this.Core.Clone(repositoryURL, localDirectoryPath);
         }
 
-        public void Commit(string localPath, string message)
+        public void Commit(string path, string message)
         {
-            this.Core.Commit(localPath, message);
+            this.Core.Commit(path, message);
         }
 
         public void Init(string directoryPath, bool quiet = false)
@@ -33,9 +33,20 @@ namespace R5T.Glyfada
             this.Core.Init(directoryPath, quiet);
         }
 
-        public void Push(string directoryPath)
+        public bool IsUnderSourceControl(string path)
         {
-            this.Core.Push(directoryPath);
+            var isUnderSourceControl = this.Core.IsUnderSourceControl(path);
+            return isUnderSourceControl;
+        }
+
+        public void Push(string path)
+        {
+            this.Core.Push(path);
+        }
+
+        public void Pull(string path)
+        {
+            this.Core.Pull(path);
         }
     }
 }
