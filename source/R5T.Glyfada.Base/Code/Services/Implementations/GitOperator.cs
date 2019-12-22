@@ -1,5 +1,7 @@
 ﻿using System;
 
+using R5T.Glyfada.Base;
+
 
 namespace R5T.Glyfada
 {
@@ -47,6 +49,12 @@ namespace R5T.Glyfada
         public void Pull(string path)
         {
             this.Core.Pull(path);
+        }
+
+        public string GetRemoteRepositoryUrl(string path, string remoteRepositoryAlias = Constants.OriginDefaultRemoteRepositoryAlias)
+        {
+            var remoteRepositoryUrl = this.Core.GetRemoteRepositoryUrl(path, remoteRepositoryAlias);
+            return remoteRepositoryAlias;
         }
     }
 }
