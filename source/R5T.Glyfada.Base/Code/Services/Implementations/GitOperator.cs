@@ -54,7 +54,7 @@ namespace R5T.Glyfada
         public string GetRemoteRepositoryUrl(string path, string remoteRepositoryAlias = Constants.OriginDefaultRemoteRepositoryAlias)
         {
             var remoteRepositoryUrl = this.Core.GetRemoteRepositoryUrl(path, remoteRepositoryAlias);
-            return remoteRepositoryAlias;
+            return remoteRepositoryUrl;
         }
     }
 }
