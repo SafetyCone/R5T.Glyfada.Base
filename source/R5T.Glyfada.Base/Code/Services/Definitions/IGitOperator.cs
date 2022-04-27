@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
-using R5T.Glyfada.Base;
+using R5T.Glyfada.Base;using R5T.T0064;
 
 
 namespace R5T.Glyfada
-{
-    public interface IGitOperator
+{[ServiceDefinitionMarker]
+    public interface IGitOperator:IServiceDefinition
     {
         void Add(string path);
         void Clone(string repositoryURL, string localDirectoryPath);
