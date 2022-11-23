@@ -10,6 +10,7 @@ namespace R5T.Glyfada
         void Add(string path);
         void Clone(string repositoryURL, string localDirectoryPath);
         void Commit(string path, string message);
+        void Fetch(string path)
         string GetRemoteRepositoryUrl(string path, string remoteRepositoryAlias = Constants.OriginDefaultRemoteRepositoryAlias);
         void Init(string directoryPath, bool quiet = false);
         bool IsUnderSourceControl(string path);
